@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.main,
+.main input {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+ 
+ 
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  height: 80vh;
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: calc(0.9 * 100vh); */
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    height: 90vh;
+    width: 85vw;
+  }
+}
+
+.main .icon {
+  width: 34px;
+}
+
+.main h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0 40px;
+}
+
+.main form {
+  display: flex;
+  align-items: flex-end;
+  /* width: 320px; */
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+
+.main input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  /* margin-right: 8px; */
+  flex: 1;
+  outline-color: #4285F4;
+  width: 65vw;
+  box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .main input[type="text"] {
+    width: 80vw;
+  }
+}
+
+.main ::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+
+.main .submitButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.inputContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.inputContainer input[type="text"] {
+  /* padding-right: 40px; */
+}
+
+.inputContainer .submitButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 5px;
+}
+/* style for loading icon */
+.ldsfacebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.ldsfacebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #808080;
+  animation: ldsfacebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.ldsfacebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.ldsfacebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.ldsfacebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes ldsfacebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+/* end - style for loading icon */
