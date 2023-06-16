@@ -1,3 +1,8 @@
+# AI Beauty Assistant PoC
+
+This is a work in progress, an AI Assistant to help users find the correct beauty products.
+The app is build with Next.js and uses OpenAI's APIs.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
