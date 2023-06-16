@@ -60,7 +60,7 @@ export default function Home() {
           <p style={{ fontSize: "24px", fontWeight: "700" }}>KiroGPT</p>
           <p style={{ fontSize: "14px" }}>AI Assistant for Kiro Beauty</p>
         </div>
-        <div style={{ height: "2500px", overflow: "auto", marginTop: "70px" }}>
+        <div style={{ overflow: "auto", marginTop: "50px" }}>
           {loading ? (
             <>
               <div className={styles.ldsfacebook}>

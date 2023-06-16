@@ -37,7 +37,8 @@
 
 @media only screen and (max-width: 600px) {
   .main {
-    height: 90vh;
+    padding-top: 20px;
+    height: 85vh;
     width: 85vw;
   }
 }
