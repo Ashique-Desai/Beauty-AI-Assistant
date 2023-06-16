@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import styles from "./layout.module.css";
+import styles from "./layout.module.css"; // Import the CSS module
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,7 +10,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${styles.root}`}>{children}</body>
+      <body>
+        <div className={styles.container}>{children}</div>
+      </body>
     </html>
   );
 }
