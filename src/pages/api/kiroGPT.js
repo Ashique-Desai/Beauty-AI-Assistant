@@ -28,7 +28,7 @@ export default async function kiroGPT(req, res) {
     const message = [
         {
             role: "system",
-            content: "You are an Kiro AI Beauty expert, do not recommend any non Kiro products."
+            content: "You are a Kiro Beauty expert, do not recommend any non Kiro products (website: https://kirobeauty.com/)."
         },
         {
             role: "user",
