@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Tooltip } from "@nextui-org/react";
 import TypingEffect from "@/components/TypingEffect";
 import Head from "next/head";
@@ -9,6 +9,30 @@ export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false); // Add loading state
+  const [data, setData] = useState(null);
+
+  // async function getData() {
+  //   const url =
+  //     "https://5o6ksfa2wd.execute-api.us-east-1.amazonaws.com/default/testAPIEndPoint";
+  //   const response = await fetch(url);
+  //   const jsonResponse = await response.json();
+  //   console.log(jsonResponse);
+  // }
+
+  // getData();
+
+  async function getData() {
+    const url =
+      "https://5o6ksfa2wd.execute-api.us-east-1.amazonaws.com/default/testAPIEndPoint";
+    const response = await fetch(url);
+    const jsonResponse = await response.json();
+    setData(jsonResponse);
+    console.log(jsonResponse);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -60,6 +84,11 @@ export default function Home() {
           <p style={{ fontSize: "24px", fontWeight: "700" }}>KiroGPT</p>
           <p style={{ fontSize: "14px" }}>AI Assistant for Kiro Beauty</p>
         </div>
+        {/* Test the aws lambda function endpoint with 15 sec delay */}
+        <div style={{ marginTop: "20px" }}>
+          {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+        </div>
+
         <div style={{ overflow: "auto", marginTop: "50px" }}>
           {loading ? (
             <>
