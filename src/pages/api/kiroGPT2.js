@@ -75,7 +75,8 @@ export default async function kiroGPT(req, res) {
     } else {
         userMessage.content = "What is Kiro beauty";
         assistantMessage.content = `Kiro makes clean beauty products, products for your lips like Non-stop Airy Matte Liquid Lip, 
-                                    Lush Moist Matte Lipstick, Super Butter Lip Lacquer. We also make products for your skin, face and eyes.`
+                                    Lush Moist Matte Lipstick, Super Butter Lip Lacquer. We also make products for your skin, face and eyes.
+                                    Kiro has a range of accessories like: Vegan Leather Bag, Canvas Pouch, Scrunchies.`
     }
 
     const message = [
