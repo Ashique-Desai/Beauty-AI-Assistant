@@ -109,6 +109,7 @@ export default function Home() {
               rounded
               color="invert"
               placement="topEnd"
+              trigger="hover"
             >
               <button type="submit" className={styles.submitButton}>
                 <svg
