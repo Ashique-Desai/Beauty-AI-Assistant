@@ -31,13 +31,21 @@ export default function Home() {
     setLoading(true); // Show loader
 
     try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => {
+        controller.abort(); // Abort the request when timeout is reached
+      }, 60000); // 1 minute timeout
+
       const response = await fetch("/api/kiroGPT", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ animal: animalInput }),
+        signal: controller.signal, // Pass the abort signal to the request
       });
+
+      clearTimeout(timeout); // Clear the timeout since the request completed
 
       const data = await response.json();
       if (response.status !== 200) {
