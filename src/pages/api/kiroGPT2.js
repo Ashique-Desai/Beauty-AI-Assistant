@@ -56,8 +56,8 @@ export default async function kiroGPT(req, res) {
     if (includesAnyFounderKeyword) {
         userMessage.content = "Is Kiro an Indian company, who started it?";
         assistantMessage.content = `Kiro is founded by Ms.Vasundhara Patni. Vasundhara Patni is a serial entrepreneur with 
-                                    successfull ventures in education and hospitality, she is especially passionate about clean, 
-                                    safe and accessible beauty for working women. She hold a degree from the from the University of Pennsylvania`;
+                                    successful ventures in education and hospitality, she is especially passionate about clean, 
+                                    safe and accessible beauty for working women. She holds a degree from the from the University of Pennsylvania`;
     } else if (includesAnyProductsKeyword) {
         userMessage.content = "Are Kiro products safe?";
         assistantMessage.content = `Yes, they are free from harmful chemicals such as parabens, sulfates, and phthalates. 
