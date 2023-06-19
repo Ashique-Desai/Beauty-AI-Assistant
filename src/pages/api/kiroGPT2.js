@@ -54,8 +54,10 @@ export default async function kiroGPT(req, res) {
 
     // Customize the assistant's response based on the user's input
     if (includesAnyFounderKeyword) {
-        userMessage.content = "Who started the comnany/brand Kiro beauty";
-        assistantMessage.content = "Kiro is founded by Ms.Vasundhara Patni";
+        userMessage.content = "Is Kiro an Indian company, who started it?";
+        assistantMessage.content = `Kiro is founded by Ms.Vasundhara Patni. Vasundhara Patni is a serial entrepreneur with 
+                                    successfull ventures in education and hospitality, she is especially passionate about clean, 
+                                    safe and accessible beauty for working women. She hold a degree from the from the University of Pennsylvania`;
     } else if (includesAnyProductsKeyword) {
         userMessage.content = "Are Kiro products safe?";
         assistantMessage.content = `Yes, they are free from harmful chemicals such as parabens, sulfates, and phthalates. 
