@@ -36,7 +36,7 @@ export default function Home() {
         controller.abort(); // Abort the request when timeout is reached
       }, 60000); // 1 minute timeout
 
-      const response = await fetch("/api/kiroGPT", {
+      const response = await fetch("/api/kiroGPT2", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
