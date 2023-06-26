@@ -40,8 +40,6 @@ export default async function kiroGPT(req, res) {
     const founderKeywords = ["founder", "started", "started company", "founder of kiro", "started kiro", "vasundhara patni", "patni", "vasundhara"];
     const includesAnyFounderKeyword = founderKeywords.some(keyword => input.toLowerCase().includes(keyword));
 
-    // Ms.Vasundhara Patni
-
     // All products general
     const productsKeywords = ["products", "all products", "kiro makes", "kiro brand", "cosmetics"];
     const includesAnyProductsKeyword = productsKeywords.some(keyword => input.toLowerCase().includes(keyword));
